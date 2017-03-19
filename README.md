@@ -21,3 +21,20 @@ python Plot_Cross_Section.py < filename >
 python Plot_Cross_Section.py Examples/Square_RC_Column.fei
 ```
 ![alt text](./Output/Crossection_1.png "Cross-Section")
+
+
+### Visualize_Contact.py
+It is used to post-process and visualize the contact elemnts for each time step
+
+#####Synatx 
+
+```script
+python Visualize_Contact.py < hdf5_output_file >
+```
+
+#####Example 
+
+```script
+python Visualize_Contact.py Examples/Square_RC_Column.fei
+```
+![alt text](./Output/Crossection_1.png "Cross-Section")
