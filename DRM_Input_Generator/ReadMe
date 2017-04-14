@@ -1,0 +1,13 @@
+
+material No = 3
+Width_X = 0.5
+Width_Y = 0
+Width_Z = 0.5
+Factor = 1
+Tolerence = 0.1
+
+Do you want to generate Acceleration and Displacement field (Yes/no)::  = Yes
+Dt = 0.1
+Total Time = 1
+Function = Field
+

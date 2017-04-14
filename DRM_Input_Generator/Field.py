@@ -15,15 +15,23 @@
 ########################################################################################################################### 
 
 import math;
+import numpy as np;
 
 
-def getField (x,y,z,t):
-	displacement = [0,0,0];
-	acceleration = [0,0,0];
-	w = 2*math.pi*1;
-	v = 1000;
-	k = w/v
-	displacement[0] = math.sin(w*t -k*z);
-	acceleration[0] = -1*w*w*math.sin(w*t -k*z);
+def getField (x,y,z,DRM_Time):
+
+	NumTimeSteps = DRM_Time.shape[0];
+	acceleration = np.zeros([3, NumTimeSteps],dtype=np.double);
+	displacement = np.ones([3, NumTimeSteps],dtype=np.double);
+	time_index = 0; 
+
+
+	for t in DRM_Time:
+		w = 2*math.pi*1;
+		v = 1000;
+		k = w/v
+		displacement[0,time_index] = math.sin(w*t -k*z);
+		acceleration[0,time_index] = -1*w*w*math.sin(w*t -k*z);
+		time_index = time_index +1;
 
 	return displacement, acceleration;
